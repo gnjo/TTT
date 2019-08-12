@@ -68,7 +68,7 @@ DCR L01 //L00 empty, L01... delete layer L01
 DCR //alive the L00 only not empty. other layer delete.
 ```
 
-#MDM
+#MaDaM
 ```
 //Mark Down Macro
 
