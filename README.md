@@ -38,3 +38,15 @@ let a=function(d){ console.log(d) }
 TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
 }}} 
 ```
+
+
+#tick loop
+```
+let tick=function(_fps,_fn){
+ if(!_fn){throw new TypeError('tick(_fps,_fn);_fn is null');return}
+ let i=0,imax=Number.MAX_SAFE_INTEGER - (Number.MAX_SAFE_INTEGER%10),safetick=()=>(i===imax)?1:i++
+ ,fps=Math.max(_fps||1000/200,1000/200),fn=_fn;
+ setInterval({ _fn(safetick()) },fps);
+}
+
+```
