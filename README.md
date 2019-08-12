@@ -27,6 +27,9 @@ CHK $01===8 //if(A0===8) memory to $00
 $00?#1
 LOG $00 $$$//like a same console.log. return value not catched.
 //canable comment double slash. dont use the astrisk wrap. /* ... */
+NLD NowLoading... sub //
+...
+CLR sub //erase loading
 @sample1 //address name @sample1
 
 <<< #1 //sub address #1. full address @sample1#1
@@ -38,6 +41,8 @@ let a=function(d){ console.log(d) }
 TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
 }}} 
 ```
+
+
 
 
 #tick loop
