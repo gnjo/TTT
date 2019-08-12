@@ -119,7 +119,7 @@ $01 {{{ Math.cos(1)*M('$01') }}} //M(memory) is convert to javascript
 //quick code
 MDM.set('fps',1000/20).set('layer',document.body).run(commandtext)
 ```
-
+#MDM.lex
 ```
 //MaDaM lex
 let text=`
@@ -169,4 +169,12 @@ fn.q('.x').textContent=lex(text).filter(d=>d.type!='comment').map(d=>d.scr).join
 
 ```
 
-
+#MDM.def MDM.cmd
+MDM.def(cmd,fn,defaultArguments)
+```
+gCmd[cmd]=fn.bind(null,defaultArguments)
+return MDM;
+```
+MDM.cmd(cmd,ary)
+```
+```
