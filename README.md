@@ -144,7 +144,12 @@ CLR sub //erase loading
 {{{ 
 let a=function(d){ console.log(d) }
 TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
-}}} 
+}}}
+
+
+
+
+
 `
 
 function lex(text){
