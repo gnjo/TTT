@@ -82,6 +82,7 @@ Mxx :MaDaM system order
  MDM:system info
  MAM:MaDaM Man command
  MAN:same Man command
+ MDG:debug flg call is 1. default 0
 Pxx :preload order
  PIM :preload Image file
  PTE :preload Text file 
@@ -93,7 +94,7 @@ $xx :memory order
 Lxx :layer order
  L00...L99
  L00 :main layer never-ever delete.
- LOG ://special case console.log
+ LOG ://special case console.log //need MDG call.
 Dxx :drawing order
  DRW
  DSW
@@ -109,5 +110,16 @@ Exx :equal
  EQL A B C: equal and jump to C.
  EXS $01 :exist $01 return $00
  EXS $01 C:exist and jump to C.
+ 
+//hard mathmatics trick
+$01 {{{ Math.cos(1)*M('$01') }}} //M(memory) is convert to javascript 
 ```
+
+```
+//quick code
+MDM.set('fps',1000/20).set('layer',document.body).set('debug',1).run(commandtext)
+
+```
+
+
 
