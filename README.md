@@ -56,6 +56,7 @@ let tick=function(_fps,_fn){
 
 ```
 #layer
+```
 L00 x y z://L00 default layer 0 0 0 z is z-index
 L01 100 100 10://new layer
 L01 100 100 12://overwrite layer
@@ -65,4 +66,5 @@ DSW L01 //show. same mean DSW L01 1
 DSW L01 0//hide
 DCR L01 //L00 empty, L01... delete layer L01
 DCR //alive the L00 only not empty. other layer delete.
+```
 
