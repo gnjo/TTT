@@ -104,6 +104,8 @@ Dxx :drawing order
 }}} :javascript wrap
 Exx :equal
  EQL A B: check the return $00
+ EQL 0 A: bool check false.
+ EQL 1 A: bool check true.
  EQL A B C: equal and jump to C.
  EXS $01 :exist $01 return $00
  EXS $01 C:exist and jump to C.
