@@ -76,3 +76,35 @@ DCR //alive the L00 only not empty. other layer delete.
 ##name //javascript 
 ###name //document
 ```
+#Mxx系
+```
+Mxx :MaDaM system order
+ MDM:system info
+ MAM:MaDaM Man command
+Pxx :preload order
+ PIM :preload Image file
+ PTE :preload Text file 
+$xx :memory order
+ $00...$99
+ $00: prepend functions return.
+ $01?xyz:exist jump
+ $01=xyz:input xyz to $00
+Lxx :layer order
+ L00...L99
+ L00 :main layer never-ever delete.
+ LOG ://special case console.log
+Dxx :drawing order
+ DRW
+ DSW
+ DCR
+>>> :arrow jump
+<<< :
+{{{ :javascript wrap
+}}} :javascript wrap
+Exx :equal
+ EQL A B: check the return $00
+ EQL A B C: equal and jump to C.
+ EXS $01 :exist $01 return $00
+ EXS $01 C:exist and jump to C.
+```
+
