@@ -81,6 +81,7 @@ DCR //alive the L00 only not empty. other layer delete.
 Mxx :MaDaM system order
  MDM:system info
  MAM:MaDaM Man command
+ MAN:same Man command
 Pxx :preload order
  PIM :preload Image file
  PTE :preload Text file 
