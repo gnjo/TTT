@@ -117,8 +117,7 @@ $01 {{{ Math.cos(1)*M('$01') }}} //M(memory) is convert to javascript
 
 ```
 //quick code
-MDM.set('fps',1000/20).set('layer',document.body).set('debug',1).run(commandtext)
-
+MDM.set('fps',1000/20).set('layer',document.body).run(commandtext)
 ```
 
 
