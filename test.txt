@@ -1,0 +1,20 @@
+@xyz
+MDM
+MDM
+XYZ 0 1 //test
+//comment
+[[[
+let a=(d)=>{return d}
+console.log('a',a);
+]]]
+MDM
+MAM //eee
+$00?#1
+
+<<< #1
+
+[[[
+let b=(d)=>{return d}
+console.log('b',b)
+]]]
+>>> #1
