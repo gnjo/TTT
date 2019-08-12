@@ -1,6 +1,11 @@
 # TTT
 TTT command
 
+```
+{{{
+xyz
+}}}
+```
 # method
 3ring param...//return value to $00.
 ```
