@@ -120,5 +120,53 @@ $01 {{{ Math.cos(1)*M('$01') }}} //M(memory) is convert to javascript
 MDM.set('fps',1000/20).set('layer',document.body).run(commandtext)
 ```
 
+```
+//MaDaM lex
+let text=`
+XYZ param1 param2//cmd XYZ
+$00 //special memory $$$ is XYZ return value.
+$01=xxx //memory to $01
+$01={{{5+6+7}}} //javascript direct wrap {{{...}}}. like the same. function(){return 5+6+7}
+$01?#1 //if($A0) jump to #1
+CHK $01===8 //if(A0===8) memory to $00
+$00?#1
+LOG $00 $$$//like a same console.log. return value not catched.
+//canable comment double slash. dont use the astrisk wrap. /* ... */
+NLD NowLoading... sub //
+...
+CLR sub //erase loading
+@sample1 //address name @sample1
+
+<<< #1 //sub address #1. full address @sample1#1
+//the loop.
+>>> #1 
+
+{{{ 
+let a=function(d){ console.log(d) }
+TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
+}}} 
+`
+
+function lex(text){
+ //linehead,type,org,code
+ let data=[],wk=-1
+ ,address=/^@/
+ ,madam=/^[><$A-Z0-9]{3}/,comment=/^\/\//,scr0=/^{{{/,scr1=/^}}}/,tailcomment=/\/\/(?:.*)$/
+ ,f=(d)=>d.replace(tailcomment,'').trim()
+ text.split('\n').map((d,i)=>{
+  //type: address,madam,comment,js
+  if(wk>-1){data[wk].org+='\n'+d;data[wk].scr+='\n'+f(d);return wk=(scr1.test(d))?-1:wk}
+  if(scr0.test(d)){data.push({linehead:i,type:'js',org:d,scr:f(d)});return wk=i}
+  if(address.test(d))return data.push({linehead:i,type:'address',org:d,scr:f(d)})
+  if(madam.test(d))return data.push({linehead:i,type:'madam',org:d,scr:f(d)})
+  //if(comment.test(d))return 
+  data.push({linehead:i,type:'comment',org:d,scr:d})
+ })
+ return data;
+}
+
+fn.q('.x').textContent=lex(text).filter(d=>d.type!='comment').map(d=>d.scr).join('\n')
+
+```
 
 
