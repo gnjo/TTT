@@ -3,9 +3,9 @@ TTT command
 
 ```
 {{{
-function xyz(){
+function xyz()
  return 'xyz';
-}
+
 }}}
 ```
 # method
