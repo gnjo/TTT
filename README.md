@@ -1,5 +1,5 @@
 # TTT
-TTT macro
+TTT command
 
 # method
 3ring param...//return value to $00.
