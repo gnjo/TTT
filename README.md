@@ -1,13 +1,6 @@
 # TTT
 TTT command
-
-```
-[[[
-function xyz(){
- return 'xyz';
-
-}
-]]]
+{{{はmdで関数ラップと同時に使われると問題が有る。txtでは問題なし。
 ```
 # method
 3ring param...//return value to $00.
@@ -19,9 +12,9 @@ function xyz(){
 big eye
 ```
 @sample1 //start address
-[[[
+{{{
  ...cut in the javascript
-]]]
+}}}
 LOG $00 $$$
 ```
 
@@ -44,10 +37,10 @@ CLR sub //erase loading
 //the loop.
 >>> #1 
 
-[[[
-let a=function(d){ console.log(d) }
+{{{
+let a=function(d) console.log(d) 
 TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
-]]]
+}}}
 
 ```
 
@@ -110,8 +103,8 @@ Dxx :drawing order
  DCR
 >>> :arrow jump
 <<< :
-[[[ :javascript wrap
-]]] :javascript wrap
+{{{ :javascript wrap
+}}} :javascript wrap
 Exx :equal
  EQL A B: check the return $00
  EQL 0 A: bool check false.
@@ -121,7 +114,7 @@ Exx :equal
  EXS $01 C:exist and jump to C.
  
 //hard mathmatics trick
-$01 [[[ Math.cos(1)*M('$01') ]]] //M(memory) is convert to javascript 
+$01 {{{ Math.cos(1)*M('$01') }}} //M(memory) is convert to javascript 
 ```
 
 ```
@@ -150,10 +143,10 @@ CLR sub //erase loading
 //the loop.
 >>> #1 
 
-[[[ 
-let a=function(d){ console.log(d) }
+{{{
+let a=function(d)  console.log(d) //
 TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
-]]]
+}}}
 
 `
 
