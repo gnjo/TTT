@@ -18,3 +18,9 @@ let b=(d)=>{return d}
 console.log('b',b)
 ]]]
 >>> #1
+
+{{{
+ funciton a(){
+  console.log('xyz')
+ }
+}}}
