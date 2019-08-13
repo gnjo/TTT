@@ -38,13 +38,9 @@ CLR sub //erase loading
 >>> #1 
 
 {{{
-let a=function(d) console.log(d) 
-TTT.cmd("LO2",a,[void 0]) //cmd definition. cmd,funciton,defaultArguments
+let a='a' 
 }}}
-
 ```
-
-
 
 
 #tick loop
